@@ -1,0 +1,10 @@
+# Use make -f Maefile.docker ... to run the relavant command
+
+build:
+	docker build --tag hex0cter/openwrt-gl-ar300m-build-platform .
+
+push:
+	docker push hex0cter/openwrt-gl-ar300m-build-platform
+
+pull:
+	docker pull hex0cter/openwrt-gl-ar300m-build-platform
