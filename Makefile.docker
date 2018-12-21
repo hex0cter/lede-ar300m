@@ -8,3 +8,6 @@ push:
 
 pull:
 	docker pull hex0cter/openwrt-gl-ar300m-build-platform
+
+run:
+	docker run -it --rm -v `pwd`:/usr/src/app --workdir /usr/src/app --name ar300 --entrypoint bash hex0cter/openwrt-gl-ar300m-build-platform
