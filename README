@@ -1,5 +1,30 @@
 This is a fork of LEDE source on 20170107
 
-This added Nand flash support for AR300M(D).
+This added Nand flash support for AR300M.
 
-The nand flash driver need to be cleared before it can be accepted by LEDE. So I put this here for the time being. 
+How to use?
+```
+make -f Makefile.docker run
+```
+
+In the container run
+```
+  make menuconfig
+```
+
+Make the following selections:
+```
+Target System (Atheros AR7xxx/AR9xxx)
+Subtarget (Generic devices with NAND flash)
+Target Profile (GL-AR300M with nand flash)
+Target Images  --->  [*] tar.gz
+                     [*] squashfs
+```
+
+The configuration is saved into .config. Reset this file if you wanna start from scratch.
+
+How to install luci
+```
+opkg update
+opkg install luci
+```
